@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    {% load static %}
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'Proyectoweb/css/mecSy.css' %}">
+    <title>Mecanica</title>
+</head>
+<body>
+    <header>
+        <nav class="Navegacion">
+            <a href="{% url 'Index' %}">Inicio</a>
+            <a href="{% url 'Mecanica' %}">Mecánica</a>
+            <a href="{% url 'Electromagnetismo' %}">Electromagnetismo</a>
+            <a href="{% url 'Calculadora' %}">Calculos</a>
+        </nav>
+            <section class="textos-header">
+                <h1>Mecánica</h1>
+            </section>
+    </header>
+    <main>
+        <div class="contenedor-textos">
+            <section class="texto-descriptivo">
+                <h2>Mecánica Clásica</h2>
+                <img src="{% static 'Proyectoweb/img/clasica.jpg'%}" alt="Mecánica Clásica">
+                <p>La mecánica clásica es una rama de la física que se ocupa del estudio de los cuerpos en movimiento y en reposo bajo la acción de fuerzas, utilizando para ello descripciones macroscópicas. Las leyes del movimiento de Newton, que son las leyes que rigen la mayor parte de los fenómenos físicos a nivel macroscópico, son un aspecto fundamental de la mecánica clásica. Esta rama de la física tiene numerosas aplicaciones en campos como la ingeniería, la astronomía y la ciencia de los materiales.</p>
+            </section>
+            <section class="texto-descriptivo">
+                <h2>Mecánica Relativista</h2>
+                <img src="{% static 'Proyectoweb/img/relativista.jpg'%}" alt="Mecánica Relativista">
+                <p>La mecánica relativista, propuesta por Albert Einstein, se encarga del estudio de aquellos cuerpos que se mueven a velocidades cercanas a la velocidad de la luz. La teoría de la relatividad especial es la que describe correctamente estos fenómenos. Esta teoría tiene muchas implicaciones profundas, como la dilatación temporal, la contracción de la longitud, y la equivalencia entre la masa y la energía (E=mc^2). La mecánica relativista es esencial para la descripción de partículas de alta energía y para la física de las estrellas de neutrones y los agujeros negros.</p>
+            </section>
+            <section class="texto-descriptivo">
+                <h2>Mecánica Cuántica</h2>
+                <img src="{% static 'Proyectoweb/img/Cuantica.jpg'%}" alt="Mecánica Cuántica">
+                <p>La mecánica cuántica es la rama de la física que se ocupa del estudio de los fenómenos a escala atómica y subatómica. Es una teoría fundamental en la descripción de la naturaleza, necesaria para entender el comportamiento de las partículas en el átomo y las interacciones entre la luz y la materia. La mecánica cuántica es conocida por sus fenómenos contra-intuitivos, como la superposición de estados y el entrelazamiento cuántico. Esta rama de la física es fundamental para la tecnología moderna, incluyendo semiconductores, láseres, y la computación cuántica.</p>
+            </section>
+        </div>
+    </main>
+</body>
+<footer>
+    <div class="contenedor-footer">
+        <div class="content-footer">
+            <h4>Sobre nosotros</h4>
+            <p>Somos un equipo dedicado a la divulgación de la física y sus aplicaciones. Creemos en el poder de la educación y el conocimiento para cambiar el mundo.</p>
+        </div>
+        <div class="content-footer">
+            <h4>Citas Inspiradoras</h4>
+            <p>"La imaginación es más importante que el conocimiento." - Albert Einstein</p>
+            <p>"Lo que no se puede imaginar, no se puede descubrir." - Richard Feynman</p>
+            <p>"El universo parece estar en gran parte compuesto de ruido." - Brian Greene</p>
+        </div>
+        <div class="content-footer">
+            <h4>Contacto</h4>
+            <p>Tunja, Colombia</p>
+            <p>(+57) 305 4082427</p>
+            <p>edgardlpl@hotmail.com</p>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2023 Física. Todos los derechos reservados.</p>
+    </div>
+</footer>
+</html>

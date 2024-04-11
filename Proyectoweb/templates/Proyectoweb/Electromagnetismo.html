@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    {% load static %}
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'Proyectoweb/css/colores.css' %}">
+    <title>Electromagnetismo</title>
+</head>
+<body>
+    <header>
+        <nav class="Navegacion">
+            <a href="{% url 'Index' %}">Inicio</a>
+            <a href="{% url 'Mecanica' %}">Mecánica</a>
+            <a href="{% url 'Electromagnetismo' %}">Electromagnetismo</a>
+            <a href="{% url 'Calculadora' %}">Calculos</a>
+        </nav>
+            <section class="textos-header">
+                <h1>Electromagnetismo</h1>
+            </section>
+    </header>
+    <main>
+        <div class="box">
+            <section class="intro">
+                <h1>Electromagnetismo</h1>
+                <img src="{% static 'Proyectoweb/img/298e933e74ec8bc393b3fdfc0bc6dd75.jpg' %}" alt="Imagen descriptiva del electromagnetismo">
+                <p>El electromagnetismo es una rama de la física que estudia y describe los fenómenos producidos por la distribución de cargas eléctricas en reposo y en movimiento, y la interacción entre ellas. Esta interacción se describe a través de las cuatro ecuaciones de Maxwell, que proporcionan una descripción completa de los fenómenos electromagnéticos tanto en condiciones estáticas como dinámicas.</p>
+                <p>El electromagnetismo es fundamental para muchas áreas de la física, incluyendo la óptica, la electricidad y el magnetismo, y es responsable de muchos fenómenos naturales, como la luz y el espectro electromagnético.</p>
+            </section>
+        </div>
+        <div class="box">
+            <section class="history">
+                <h2>Historia del Electromagnetismo</h2>
+                <img src="{% static 'Proyectoweb/img/histoelect.jpg' %}" alt="Imagen descriptiva de la historia del electromagnetismo">
+                <p>El electromagnetismo ha sido estudiado a lo largo de la historia por muchos científicos destacados, incluyendo a Michael Faraday, James Clerk Maxwell y Albert Einstein. La teoría del electromagnetismo fue formulada por primera vez de manera completa por James Clerk Maxwell en el siglo XIX.</p>
+                <ul>
+                    <li><strong>Michael Faraday:</strong> Realizó importantes contribuciones a la comprensión del electromagnetismo, incluyendo la ley de Faraday de la inducción electromagnética. Faraday también descubrió la ley de la inducción electromagnética, que es fundamental para la generación de electricidad en la actualidad.</li>
+                    <li><strong>James Clerk Maxwell:</strong> Formuló las ecuaciones de Maxwell, que describen cómo funcionan los campos eléctricos y magnéticos. Las ecuaciones de Maxwell son fundamentales para nuestra comprensión del electromagnetismo y han permitido el desarrollo de tecnologías como la radio, la televisión y la telefonía móvil.</li>
+                    <li><strong>Albert Einstein:</strong> Propuso la teoría de la relatividad especial, que describe cómo las leyes de la física funcionan cuando se observan desde diferentes marcos de referencia en movimiento relativo. Esta teoría tiene importantes implicaciones para el electromagnetismo, ya que muestra que el espacio y el tiempo están interrelacionados y pueden ser afectados por campos electromagnéticos.</li>
+                </ul>
+            </section>
+        </div>
+        <div class="box">
+            <section class="applications">
+                <h2>Aplicaciones del Electromagnetismo</h2>
+                <img src="{% static 'Proyectoweb/img/aplielec.jpg' %}" alt="Imagen descriptiva de las aplicaciones del electromagnetismo">
+                <p>El electromagnetismo tiene muchas aplicaciones en la vida cotidiana, desde la generación y transmisión de electricidad hasta las telecomunicaciones, los electrodomésticos y la medicina moderna.</p>
+                <ul>
+                    <li><strong>Generación y transmisión de electricidad:</strong> Las centrales eléctricas utilizan el electromagnetismo para generar electricidad, que luego se transmite a hogares y empresas a través de cables de alta tensión. La ley de Faraday de la inducción electromagnética es la base de la generación de electricidad en las centrales eléctricas.</li>
+                    <li><strong>Telecomunicaciones:</strong> Las señales de radio y televisión, las comunicaciones por satélite y las redes de telefonía móvil dependen todas del electromagnetismo. Las ondas electromagnéticas, que incluyen las ondas de radio, las microondas y las ondas de luz, son fundamentales para la transmisión de información a larga distancia.</li>
+                    <li><strong>Electrodomésticos:</strong> Muchos electrodomésticos, como la nevera, la lavadora y el horno microondas, funcionan gracias al electromagnetismo. El electromagnetismo permite que estos dispositivos funcionen y realicen sus funciones.</li>
+                </ul>
+            </section>
+        </div>
+    </main>
+</body>
+<footer>
+    <div class="contenedor-footer">
+        <div class="content-footer">
+            <h4>Sobre nosotros</h4>
+            <p>Somos un equipo dedicado a la divulgación de la física y sus aplicaciones. Creemos en el poder de la educación y el conocimiento para cambiar el mundo.</p>
+        </div>
+        <div class="content-footer">
+            <h4>Citas Inspiradoras</h4>
+            <p>"La imaginación es más importante que el conocimiento." - Albert Einstein</p>
+            <p>"Lo que no se puede imaginar, no se puede descubrir." - Richard Feynman</p>
+            <p>"El universo parece estar en gran parte compuesto de ruido." - Brian Greene</p>
+        </div>
+        <div class="content-footer">
+            <h4>Contacto</h4>
+            <p>Tunja, Colombia</p>
+            <p>(+57) 305 4082427</p>
+            <p>edgardlpl@hotmail.com</p>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2023 Física. Todos los derechos reservados.</p>
+    </div>
+</footer>
+</html>

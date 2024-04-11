@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    {% load static %}
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <link rel="stylesheet" href="{% static 'Proyectoweb/css/style.css' %}">
+</head>
+<body>
+    <header>
+        <nav class="Navegacion">
+            <a href="{% url 'Index' %}">Inicio</a>
+            <a href="{% url 'Mecanica' %}">Mecánica</a>
+            <a href="{% url 'Electromagnetismo' %}">Electromagnetismo</a>
+            <a href="{% url 'Calculadora' %}">Calculos</a>
+        </nav>
+        <section class="textos-header">
+            <h1>Calculadora</h1>
+        </section>
+    </header>
+    <main>
+        <h2>Calculadora de Física</h2>
+    
+        <form method="post">
+            {% csrf_token %}
+            <h3>Energía Cinética</h3>
+            <label for="masa">Masa (kg):</label>
+            <input type="number" id="masa" name="masa">
+            <label for="velocidad">Velocidad (m/s):</label>
+            <input type="number" id="velocidad" name="velocidad">
+            <button type="submit" name="calculo" value="energia_cinetica">Calcular Energía Cinética</button>
+    
+            <h3>Energía Potencial</h3>
+            <label for="masa">Masa (kg):</label>
+            <input type="number" id="masa" name="masa">
+            <label for="gravedad">Gravedad (m/s²):</label>
+            <input type="number" id="gravedad" name="gravedad">
+            <label for="altura">Altura (m):</label>
+            <input type="number" id="altura" name="altura">
+            <button type="submit" name="calculo" value="energia_potencial">Calcular Energía Potencial</button>
+
+            <h3>Trabajo</h3>
+            <label for="fuerza">Fuerza (N):</label>
+            <input type="number" id="fuerza" name="fuerza">
+            <label for="distancia">Distancia (m):</label>
+            <input type="number" id="distancia" name="distancia">
+            <button type="submit" name="calculo" value="trabajo">Calcular Trabajo</button>
+
+            <h3>Caida Libre</h3>
+            <label for="altura">Altura (m):</label>
+            <input type="number" id="altura" name="altura">
+            <button type="submit" name="calculo" value="caida_libre">Calcular Caida Libre</button>
+
+            <h3>Velocidad Final</h3>
+            <label for="velocidad_inicial">Velocidad Inicial (m/s):</label>
+            <input type="number" id="velocidad_inicial" name="velocidad_inicial">
+            <label for="aceleracion">Aceleración (m/s²):</label>
+            <input type="number" id="aceleracion" name="aceleracion">
+            <label for="tiempo">Tiempo (s):</label>
+            <input type="number" id="tiempo" name="tiempo">
+            <button type="submit" name="calculo" value="velocidad_final">Calcular Velocidad Final</button>
+
+            <h3>Calcular Altura Maxima</h3>
+            <label for="velocidad_inicial">Velocidad Inicial (m/s):</label>
+            <input type="number" id="velocidad_inicial" name="velocidad_inicial">
+            <label for="aceleracion">Aceleración (m/s²):</label>
+            <input type="number" id="aceleracion" name="aceleracion">
+            <button type="submit" name="calculo" value="altura_maxima">Calcular Altura Maxima</button>
+
+            <h3>Calcular Distancia Recorrida</h3>
+            <label for="velocidad_inicial">Velocidad Inicial (m/s):</label>
+            <input type="number" id="velocidad_inicial" name="velocidad_inicial">
+            <label for="velocidad_final">Velocidad Final (m/s):</label>
+            <input type="number" id="velocidad_final" name="velocidad_final">
+            <label for="tiempo">Tiempo (s):</label>
+            <input type="number" id="tiempo" name="tiempo">
+            <button type="submit" name="calculo" value="distancia_recorrida">Calcular Distancia Recorrida</button>
+
+            <h3>Calcular Fuerza</h3>
+            <label for="masa">Masa (kg):</label>
+            <input type="number" id="masa" name="masa">
+            <label for="aceleracion">Aceleración (m/s²):</label>
+            <input type="number" id="aceleracion" name="aceleracion">
+            <button type="submit" name="calculo" value="fuerza">Calcular Fuerza</button>
+
+            <h3>Calcular Aceleración</h3>
+            <label for="fuerza">Fuerza (N):</label>
+            <input type="number" id="fuerza" name="fuerza">
+            <label for="masa">Masa (kg):</label>
+            <input type="number" id="masa" name="masa">
+            <button type="submit" name="calculo" value="aceleracion">Calcular Aceleración</button>
+
+            <h3>Calcular Masa</h3>
+            <label for="fuerza">Fuerza (N):</label>
+            <input type="number" id="fuerza" name="fuerza">
+            <label for="aceleracion">Aceleración (m/s²):</label>
+            <input type="number" id="aceleracion" name="aceleracion">
+            <button type="submit" name="calculo" value="masa">Calcular Masa</button>
+
+            <h3>Calcular Fuerza Elastica</h3>
+            <label for="constante_elastica">Constante Elastica (N/m):</label>
+            <input type="number" id="constante_elastica" name="constante_elastica">
+            <label for="deformacion">Deformación (m):</label>
+            <input type="number" id="deformacion" name="deformacion">
+            <button type="submit" name="calculo" value="fuerza_elastica">Calcular Fuerza Elastica</button>
+
+            <h3>Calcular Constante resorte</h3>
+            <label for="fuerza_elastica">Fuerza Elastica (N):</label>
+            <input type="number" id="fuerza_elastica" name="fuerza_elastica">
+            <label for="deformacion">Deformación (m):</label>
+            <input type="number" id="deformacion" name="deformacion">
+            <button type="submit" name="calculo" value="constante_resorte">Calcular Constante resorte</button>
+
+        </form>
+
+        {% if resultado %}
+            <h2>Resultado:</h2>
+            <p>{{ resultado }}</p>
+        {% endif %}
+    </main>
+</body>
+<footer>
+    <div class="contenedor-footer">
+        <div class="content-footer">
+            <h4>Sobre nosotros</h4>
+            <p>Somos un equipo dedicado a la divulgación de la física y sus aplicaciones. Creemos en el poder de la educación y el conocimiento para cambiar el mundo.</p>
+        </div>
+        <div class="content-footer">
+            <h4>Citas Inspiradoras</h4>
+            <p>"La imaginación es más importante que el conocimiento." - Albert Einstein</p>
+            <p>"Lo que no se puede imaginar, no se puede descubrir." - Richard Feynman</p>
+            <p>"El universo parece estar en gran parte compuesto de ruido." - Brian Greene</p>
+        </div>
+        <div class="content-footer">
+            <h4>Contacto</h4>
+            <p>Tunja, Colombia</p>
+            <p>(+57) 305 4082427</p>
+            <p>edgardlpl@hotmail.com</p>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2023 Física. Todos los derechos reservados.</p>
+    </div>
+</footer>
+</html>

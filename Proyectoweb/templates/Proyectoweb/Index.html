@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    {% load static %}
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Física</title>
+    <link rel="stylesheet" href="{% static 'Proyectoweb/css/estilos.css' %}">
+</head>
+<body>
+    <header>
+            <nav class="Navegacion">
+                <a href="{% url 'Index' %}">Inicio</a>
+                <a href="{% url 'Mecanica' %}">Mecánica</a>
+                <a href="{% url 'Electromagnetismo' %}">Electromagnetismo</a>
+                <a href="{% url 'Calculadora' %}">Calculos</a>
+            </nav>
+            <section class="textos-header">
+                <h1>Física</h1>
+                <h2>"La vida es y seguirá siendo una ecuación sin solución, pero contiene algunos factores conidos" Nikola Tesla</h2>
+            </section>
+    </header>
+    <main>
+        <section class="contenedor acerca-de-fisica">
+            <h2 class="titulo">¿QUÉ ES LA FÍSICA?</h2>
+            <div class="contenedor-acerca-de-fisica">
+                <video autoplay loop muted>
+                    <source src="{% static 'Proyectoweb/img/pinterestdownloader.com-1701124166.328633.mp4' %}" type="video/mp4">
+                </video>
+                <div class="contenido-textos">
+                    <h3> Un vistazo a la Física</h>
+                    <p>La física es una ciencia que estudia las propiedades del universo, desde las partículas más pequeñas hasta las galaxias más grandes. A lo largo de la historia, muchos fisicos han contribuido a nuestra comprensión del universo.</p>
+                </div>
+            </div>
+        </section>
+        <section class="exponentes-contenedor">
+            <h2 class="titulo">PRINCIPALES EXPONENTES DE LA FÍSICA</h2>
+            <div class="linea-contenedor">
+                <div class="card">
+                    <img src="{% static 'Proyectoweb/img/6efb2a2cb9cdd89f6d9c781747710ff0.jpg' %}">
+                    <div class="contenido-texto-card">
+                        <h4>Isaac Newton</h4>
+                        <p>Conocido como el padre de la física clásica, newton formuló las leyes del movimiento y la ley de la gravitación universal, que sentaron las bases para la física clásica</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="{% static 'Proyectoweb/img/1cc5fc31e4663ca9385f76f7375cc5af.jpg'%}">
+                    <div class="contenido-texto-card">
+                        <h4>Nikola Tesla</h4>
+                        <p>Este inventor serbio-estadounidense es conocido por sus contribuciones al diseño del sistema moderno de suministro de electricidad de corriente alterna. Sus ideas e inventos ayudaron a dar forma al mundo moderno</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="{% static 'Proyectoweb/img/4021cc281ae73c29a6bdf4f6e11e290c.jpg'%}">
+                    <div class="contenido-texto-card">
+                        <h4>Albert Einstein</h4>
+                        <p>Este físico alemán es conocido por su teoría de la relatividad, que cambió la forma en que los físicos veían el espacio y el tiempo. Einstein también formuló la ecuación E = mc2, que muestra la equivalencia entre la masa y la energía</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="{% static 'Proyectoweb/img/3cdca70fba0f4735b84b7628f69f3584.jpg'%}">
+                    <div class="contenido-texto-card">
+                        <h4>Marie Curie</h4>
+                        <p>Esta física y química polaco-francesa fue pionera en el campo de la radioactividad. Fue la primera mujer en ganar un Premio Nobel y la única persona en ganar el Nobel en dos campos científicos diferenetes</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="contenedor servicios">
+            <h2 class="titulo">SERVICIOS</h2>
+            <div class="contenedor-servicios">
+                <div class="servicio-violeta">
+                    <img src="{% static 'Proyectoweb/img/Mec.jpg'%}">
+                    <h3>Mecánica</h3>
+                    <p>La mecánica es la rama de la física que estudia y analiza el movimiento y reposo de los cuerpos, y su evolución en el tiempo, bajo la acción de fuerzas. Modernamente la mecánica incluye la evolución de sistemas físicos más generales que los cuerpos másicos.</p>
+                    <a href="{% url 'Mecanica' %}">Leer más</a>
+                </div>
+                <div class="servicio-celeste">
+                    <img src="{% static 'Proyectoweb/img/Electro.jpg'%}">
+                    <h3>Electromagnetismo</h3>
+                    <p>El electromagnetismo es una rama de la física que estudia y unifica los fenómenos eléctricos y magnéticos en una sola teoría, cuyos fundamentos fueron presentados por Michael Faraday y formulados por primera vez de modo completo por James Clerk Maxwell.</p>
+                    <a href="{% url 'Electromagnetismo' %}">Leer más</a>
+                </div>
+                <div class="servicio-violeta">
+                    <img src="{% static 'Proyectoweb/img/Calc.jpg'%}">
+                    <h3>Calculadora</h3>
+                    <p>La calculadora es un dispositivo que se utiliza para realizar cálculos aritméticos. Debido a la gran cantidad de cálculos que se pueden realizar con ella, se han creado distintos tipos de calculadoras, como la calculadora científica y la calculadora gráfica.</p>
+                    <a href="{% url 'Calculadora' %}">Leer más</a>
+                </div>
+            </div>
+    </main>
+</body>
+<footer>
+    <div class="contenedor-footer">
+        <div class="content-footer">
+            <h4>Sobre nosotros</h4>
+            <p>Somos un equipo dedicado a la divulgación de la física y sus aplicaciones. Creemos en el poder de la educación y el conocimiento para cambiar el mundo.</p>
+        </div>
+        <div class="content-footer">
+            <h4>Citas Inspiradoras</h4>
+            <p>"La imaginación es más importante que el conocimiento." - Albert Einstein</p>
+            <p>"Lo que no se puede imaginar, no se puede descubrir." - Richard Feynman</p>
+            <p>"El universo parece estar en gran parte compuesto de ruido." - Brian Greene</p>
+        </div>
+        <div class="content-footer">
+            <h4>Contacto</h4>
+            <p>Tunja, Colombia</p>
+            <p>(+57) 305 4082427</p>
+            <p>edgardlpl@hotmail.com</p>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2023 Física. Todos los derechos reservados.</p>
+    </div>
+</footer>
+</html>
