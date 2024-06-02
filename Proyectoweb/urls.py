@@ -4,7 +4,7 @@ from Proyectoweb import views
 
 urlpatterns = [
     path('', views.index, name="Index"),
-    path('Mecanica/', views.mecanic, name="Mecanica"),
+    path('Circuitos/', views.mecanic, name="Circuitos"),
     path('Electromagnetismo/', views.electromagnetismo, name="Electromagnetismo"),
     path('Calculadora/', views.calculadora, name="Calculadora"),
 ]

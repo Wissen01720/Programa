@@ -1,174 +1,54 @@
 import math
 
 
-def calcular_energia_cinetica(masa, velocidad):
+def calcular_resistencias_circuitoSerie(resistencias):
     """
-    Calcula la energía cinética de un objeto.
+    Calcula la resistencia total de un circuito en serie.
 
     Parámetros:
-    masa (float) - la masa del objeto en kilogramos
-    velocidad (float) - la velocidad del objeto en metros por segundo
+    resistencias (list) - una lista de resistencias en ohms
 
     Retorna:
-    float - la energía cinética del objeto en julios
+    float - la resistencia total del circuito en ohms
     """
-    return 0.5 * masa * velocidad**2
+    resistencia_total = 0
+    for resistencia in resistencias:
+        resistencia_total += resistencia
+    return resistencia_total
 
-def calcular_energia_potencial(masa, altura, gravedad=9.8):
+def calcular_resistencias_circuitoParalelo(resistencias):
     """
-    Calcula la energía potencial de un objeto.
+    Calcula la resistencia total de un circuito en paralelo.
 
     Parámetros:
-    masa (float) - la masa del objeto en kilogramos
-    altura (float) - la altura del objeto en metros
-    gravedad (float) - la aceleración de la gravedad en metros por segundo cuadrado
+    resistencias (list) - una lista de resistencias en ohms
 
     Retorna:
-    float - la energía potencial del objeto en julios
+    float - la resistencia total del circuito en ohms
     """
-    return masa * gravedad * altura
+    resistencia_total = 0
+    for resistencia in resistencias:
+        resistencia_total += 1 / resistencia
+    return 1 / resistencia_total
 
-def calcular_energia_mecanica(energia_cinetica, energia_potencial):
+def calcular_resistencia_circuitoMixto(resistencias):
     """
-    Calcula la energía mecánica de un objeto.
+    Calcula la resistencia total de un circuito mixto.
 
     Parámetros:
-    energia_cinetica (float) - la energía cinética del objeto en julios
-    energia_potencial (float) - la energía potencial del objeto en julios
+    resistencias (list) - una lista de resistencias en ohms
 
     Retorna:
-    float - la energía mecánica del objeto en julios
+    float - la resistencia total del circuito en ohms
     """
-    return energia_cinetica + energia_potencial
-
-def calcular_trabajo(fuerza, distancia, angulo=0):
-    """
-    Calcula el trabajo realizado por una fuerza.
-
-    Parámetros:
-    fuerza (float) - la fuerza aplicada al objeto en newtons
-    distancia (float) - la distancia que se mueve el objeto en metros
-    angulo (float) - el ángulo entre la fuerza y la distancia en grados
-
-    Retorna:
-    float - el trabajo realizado en julios
-    """
-    return fuerza * distancia * math.cos(math.radians(angulo))
-
-def calcular_caida_libre(altura):
-    """
-    Calcula el tiempo que tarda un objeto en caer desde una altura.
-
-    Parámetros:
-    altura (float) - la altura del objeto en metros
-
-    Retorna:
-    float - el tiempo que tarda el objeto en caer en segundos
-    """
-    return math.sqrt(2 * altura / 9.8)
-
-def calcular_velocidad_final(velocidad_inicial, aceleracion, tiempo):
-    """
-    Calcula la velocidad final de un objeto.
-
-    Parámetros:
-    velocidad_inicial (float) - la velocidad inicial del objeto en metros por segundo
-    aceleracion (float) - la aceleración del objeto en metros por segundo cuadrado
-    tiempo (float) - el tiempo que tarda el objeto en moverse en segundos
-
-    Retorna:
-    float - la velocidad final del objeto en metros por segundo
-    """
-    return velocidad_inicial + aceleracion * tiempo
-
-def calcular_altura_maxima(velocidad_inicial, aceleracion): 
-    """
-    Calcula la altura máxima de un objeto.
-
-    Parámetros:
-    velocidad_inicial (float) - la velocidad inicial del objeto en metros por segundo
-    aceleracion (float) - la aceleración del objeto en metros por segundo cuadrado
-
-    Retorna:
-    float - la altura máxima del objeto en metros
-    """
-    return velocidad_inicial**2 / (2 * aceleracion)
-
-def calcular_distancia_recorrida(velocidad_inicial, tiempo, aceleracion=0):
-    """
-    Calcula la distancia recorrida por un objeto.
-
-    Parámetros:
-    velocidad_inicial (float) - la velocidad inicial del objeto en metros por segundo
-    tiempo (float) - el tiempo que tarda el objeto en moverse en segundos
-    aceleracion (float) - la aceleración del objeto en metros por segundo cuadrado
-
-    Retorna:
-    float - la distancia recorrida por el objeto en metros
-    """
-    return velocidad_inicial * tiempo + 0.5 * aceleracion * tiempo**2
-
-def calcular_fuerza(masa, aceleracion):
-    """
-    Calcula la fuerza de un objeto.
-
-    Parámetros:
-    masa (float) - la masa del objeto en kilogramos
-    aceleracion (float) - la aceleración del objeto en metros por segundo cuadrado
-
-    Retorna:
-    float - la fuerza del objeto en newtons
-    """
-    return masa * aceleracion
-
-def calcular_aceleracion(fuerza, masa):
-    """
-    Calcula la aceleración de un objeto.
-
-    Parámetros:
-    fuerza (float) - la fuerza aplicada al objeto en newtons
-    masa (float) - la masa del objeto en kilogramos
-
-    Retorna:
-    float - la aceleración del objeto en metros por segundo cuadrado
-    """
-    return fuerza / masa
-
-def calcular_masa(fuerza, aceleracion):
-    """
-    Calcula la masa de un objeto.
-
-    Parámetros:
-    fuerza (float) - la fuerza aplicada al objeto en newtons
-    aceleracion (float) - la aceleración del objeto en metros por segundo cuadrado
-
-    Retorna:
-    float - la masa del objeto en kilogramos
-    """
-    return fuerza / aceleracion
-
-def calcular_fuerza_elastica(constante_resorte, distancia):
-    """
-    Calcula la fuerza elástica de un resorte.
-
-    Parámetros:
-    constante_resorte (float) - la constante del resorte en newtons por metro
-    distancia (float) - la distancia que se estira o comprime el resorte en metros
-
-    Retorna:
-    float - la fuerza elástica del resorte en newtons
-    """
-    return constante_resorte * distancia
-
-def calcular_constante_resorte(fuerza_elastica, distancia):
-    """
-    Calcula la constante de un resorte.
-
-    Parámetros:
-    fuerza_elastica (float) - la fuerza elástica del resorte en newtons
-    distancia (float) - la distancia que se estira o comprime el resorte en metros
-
-    Retorna:
-    float - la constante del resorte en newtons por metro
-    """
-    return fuerza_elastica / distancia
+    resistencia_total = 0
+    resistencias_serie = []
+    resistencias_paralelo = []
+    for resistencia in resistencias:
+        if isinstance(resistencia, list):
+            resistencias_paralelo.append(calcular_resistencias_circuitoParalelo(resistencia))
+        else:
+            resistencias_serie.append(resistencia)
+    resistencia_total = calcular_resistencias_circuitoSerie(resistencias_serie)
+    resistencia_total += calcular_resistencias_circuitoParalelo(resistencias_paralelo)
+    return resistencia_total

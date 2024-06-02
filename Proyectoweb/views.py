@@ -10,7 +10,7 @@ def index(request):
 
 
 def mecanic(request):
-    return render(request, "Proyectoweb/Mecanica.html")
+    return render(request, "Proyectoweb/Circuitos.html")
 
 
 def electromagnetismo(request):

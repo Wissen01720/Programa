@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    {% load static %}
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'Proyectoweb/css/mecSy.css' %}">
+    <title>Mecanica</title>
+</head>
+<body>
+    <header>
+        <nav class="Navegacion">
+            <a href="{% url 'Index' %}">Inicio</a>
+            <a href="{% url 'Circuitos' %}">Circuitos</a>
+            <a href="{% url 'Electromagnetismo' %}">Electromagnetismo</a>
+            <a href="{% url 'Calculadora' %}">Calculos</a>
+        </nav>
+            <section class="textos-header">
+                <h1>Circuitos</h1>
+            </section>
+    </header>
+    <main>
+        <div class="contenedor-textos">
+            <section class="texto-descriptivo">
+                <h2>Circuito en Serie</h2>
+                <img src="{% static 'Proyectoweb/img/En serie.jpg'%}" alt="Circuito en serie">
+                <p>Un circuito en serie es un circuito eléctrico en el que los componentes están conectados uno tras otro, de modo que la corriente fluye a través de cada componente en una sola dirección. Los circuitos en serie son útiles para conectar componentes que necesitan la misma corriente, como las luces de Navidad.</p>
+            </section>
+            <section class="texto-descriptivo">
+                <h2>Cirucito en Paralelo</h2>
+                <img src="{% static 'Proyectoweb/img/paralelo.jpg'%}" alt="Circuito en paralelo">
+                <p>Un circuito en paralelo es un circuito eléctrico en el que los componentes están conectados de tal manera que la corriente se divide entre los componentes. Los circuitos en paralelo son útiles para conectar componentes que necesitan diferentes corrientes, como los electrodomésticos en una casa. </p>
+            </section>
+            <section class="texto-descriptivo">
+                <h2>Circuito Mixto</h2>
+                <img src="{% static 'Proyectoweb/img/mixto.jpg'%}" alt="Circuito Mixto">
+                <p>Los circuitos mixtos son combinaciones de circuitos en serie y en paralelo. Esto significa que contienen ramificaciones donde algunos componentes est[an conectados en seria y otros en paralelo. Los circuitos mixtos son comunes en aplicaciones como los sistemas electricos de edificios y los circuitos integrados en dispositivo. Para analizar un circuito mixto, se pueden usar las leyes de Kirchhoff y las reglas de los circuitos en serie y en paralelo.</p>
+            </section>
+        </div>
+    </main>
+</body>
+<footer>
+    <div class="contenedor-footer">
+        <div class="content-footer">
+            <h4>Sobre nosotros</h4>
+            <p>Somos un equipo dedicado a la divulgación de la física y sus aplicaciones. Creemos en el poder de la educación y el conocimiento para cambiar el mundo.</p>
+        </div>
+        <div class="content-footer">
+            <h4>Citas Inspiradoras</h4>
+            <p>"La imaginación es más importante que el conocimiento." - Albert Einstein</p>
+            <p>"Lo que no se puede imaginar, no se puede descubrir." - Richard Feynman</p>
+            <p>"El universo parece estar en gran parte compuesto de ruido." - Brian Greene</p>
+        </div>
+        <div class="content-footer">
+            <h4>Contacto</h4>
+            <p>Tunja, Colombia</p>
+            <p>(+57) 305 4082427</p>
+            <p>edgardlpl@hotmail.com</p>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2023 Física. Todos los derechos reservados.</p>
+    </div>
+</footer>
+</html>
